@@ -23,7 +23,8 @@ python .\edge_domstorage.py -h
 # Results
 
 python .\edge_domstorage.py -usr UsrClass.dat
-
+    
+    <snip>
     2018-09-05 21:22:27.391993,account.godaddy.com
     2018-09-04 23:17:20.813562,account.microsoft.com
     2018-09-06 16:19:04.114895,account.t-mobile.com
@@ -32,3 +33,4 @@ python .\edge_domstorage.py -usr UsrClass.dat
     2018-09-07 00:35:26.722242,autozone.com
     2018-09-04 23:26:17.854053,betterment.com
     2018-09-09 15:10:27.987114,bing.com
+    <snip>
