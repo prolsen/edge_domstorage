@@ -23,7 +23,8 @@ python .\edge_domstorage.py -h
 # Results
 
 python .\edge_domstorage.py -usr UsrClass.dat
-    
+
+    timestamp,url
     <snip>
     2018-09-05 21:22:27.391993,account.godaddy.com
     2018-09-04 23:17:20.813562,account.microsoft.com
