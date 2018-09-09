@@ -1,7 +1,8 @@
 '''
 Author: Patrick Olsen
 '''
-
+import sys
+import csv
 import argparse
 from datetime import datetime
 from Registry import Registry
@@ -39,7 +40,14 @@ class DomStorage(object):
             for u in url:
                 time = datetime.__str__(u.timestamp())
                 url = u.name()
-                print(time + ',' + url)
+                yield([time, url])
+
+    def getResults(self, results):
+        writer = csv.writer(sys.stdout)
+        writer.writerow(['timestamp','url'])
+        for res in results:
+            for r in res:
+                writer.writerow([r[0], r[1]])
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Microsoft Edge DomStorage parser')
@@ -52,5 +60,10 @@ if __name__ == "__main__":
     children = DomStorage(hive).getPath()
     kids = DomStorage(hive).getChildren(children)
 
+    resultsList = []
+
     for urls in DomStorage(hive).getDoms(kids):
-        DomStorage(hive).getURLs(urls)
+        results = DomStorage(hive).getURLs(urls)
+        resultsList.append(results)
+
+    DomStorage(hive).getResults(resultsList)
