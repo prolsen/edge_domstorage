@@ -1,10 +1,12 @@
 # Microsoft Edge DOMStorage Parser
 
-Print URLs from Microsoft Edge's DOMStorage and EdpDomStorage Entries. The location of the entries are here:
+Print URLs from Microsoft Edge's DOMStorage and EdpDomStorage Entries. The location of the entries are below. The entries come from the UsrClass.dat registry hive.
 
-    HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\Children\###\Internet Explorer\DOMStorage
+    Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\Children\###\Internet Explorer\DOMStorage
 
-    HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wek yb3d8bbwe\Children\###\Internet Explorer\EdpDomStorage
+    Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wek yb3d8bbwe\Children\###\Internet Explorer\EdpDomStorage
+    
+There are multiple "children", hence the ###. The code will iterate through them and return the URLs.
 
 # Help
 
