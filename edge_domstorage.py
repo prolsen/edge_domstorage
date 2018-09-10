@@ -50,8 +50,8 @@ class DomStorage(object):
 
     def getDoms(self, kids):
         for k in kids:
-            domstorage = self.regpath + '\%s\Internet Explorer\DOMStorage' % (k)
-            edp_domstorage = self.regpath + '\%s\Internet Explorer\EdpDomStorage' % (k)
+            domstorage = self.regpath + '\{}\Internet Explorer\DOMStorage'.format(k)
+            edp_domstorage = self.regpath + '\{}\Internet Explorer\EdpDomStorage'.format(k)
 
             domstorage_subkeys = Registry.Registry(self.hive).open(domstorage).subkeys()
             edpdomstorage_subkeys = Registry.Registry(self.hive).open(edp_domstorage).subkeys()
