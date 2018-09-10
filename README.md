@@ -6,7 +6,9 @@ Print URLs from Microsoft Edge's DOMStorage and EdpDomStorage Entries. The locat
 
     Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wek yb3d8bbwe\Children\###\Internet Explorer\EdpDomStorage
     
-There are multiple "children", hence the ###. The code will iterate through them and return the URLs.
+There are multiple "children", hence the ###. The code will iterate through them and return the URLs visited. These also marry up with the entries located here where you will find your treasure chest of Edge browser activity information.
+
+        C:\Users\me\Appdata\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\#!001, #!002, #!003, #!006, #!121
 
 # Help
 
